@@ -1,10 +1,12 @@
-body {
+body { 
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: #f4f4f4;
 }
 
+
 /* ENCABEZADO */
+
 header {
     background-color: #2e7d32;
     color: white;
@@ -20,30 +22,16 @@ header h1 {
     font-size: 36px;
 }
 
-header p {
-    margin: 8px 0 0;
-    font-size: 16px;
-}
 
 /* MENU */
+
 nav {
     background-color: #1b5e20;
     text-align: center;
-    padding: 10px;
-    position: sticky;
-    top: 96px;
-    z-index: 999;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 10px;
-    font-weight: bold;
-}nav {
-    background-color: #1b5e20;
-    text-align: center;
     padding: 12px;
+    position: sticky;
+    top: 76px;
+    z-index: 999;
 }
 
 nav a {
@@ -57,92 +45,9 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* PORTADA */
-.portada {
-    width: 100%;
-}
 
-.portada img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    display: block;
-}
+/* MENU DESPLEGABLE */
 
-/* CONTENIDO */
-main {
-    max-width: 900px;
-    margin: 20px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-}
-
-/* GALERIA */
-.galeria {
-    max-width: 1100px;
-    margin: 40px auto;
-    text-align: center;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}
-
-.grid img {
-    width: 95%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s;
-    cursor: pointer;
-}
-
-.grid img:hover {
-    transform: scale(1.05);
-}
-main p {
-    text-align: justify;
- }
-
-/* CELULARES */
-@media (max-width: 700px) {
-
-    header h1 {
-        font-size: 28px;
-    }
-
-    header p {
-        font-size: 14px;
-    }
-
-    nav {
-        position: relative;
-        top: 0;
-    }
-
-    nav a {
-        display: block;
-        margin: 8px;
-    }
-
-    .portada img {
-        height: 200px;
-    }
-
-    main {
-        margin: 15px;
-        padding: 20px;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-/* Menú desplegable */
 .dropdown {
     display: inline-block;
     position: relative;
@@ -171,4 +76,260 @@ main p {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+
+/* CONTENIDO */
+
+main {
+    max-width: 1100px;
+    margin: 20px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+main p {
+    text-align: justify;
+}
+
+
+/* MANIFIESTO */
+
+.legado {
+    max-width: 700px;
+    margin: 70px auto;
+    padding: 50px;
+    background: #ffffff;
+    border-left: none;
+    border-top: 3px solid #2e7d32;
+    border-bottom: 3px solid #2e7d32;
+    font-style: italic;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #444;
+}
+
+.legado p {
+    text-align: center;
+}
+
+.legado p:first-child {
+    font-size: 2em;
+    font-weight: bold;
+    font-style: normal;
+    color: #1b5e20;
+    margin-bottom: 30px;
+}
+
+/* GALERIA */
+
+.galeria {
+    max-width: 1100px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.grid img {
+    width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* ESTABLECIMIENTOS */
+
+.establecimientos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.tarjeta h3 {
+    margin: 15px;
+}
+
+.tarjeta p {
+    margin: 0 15px 15px;
+}
+
+.tarjeta a {
+    display: inline-block;
+    margin: 0 15px 20px;
+    padding: 8px 15px;
+    background: #2f6b2f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        position: relative;
+        top: 0;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    main {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .establecimientos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .legado {
+        padding: 20px;
+        font-size: 1.05em;
+    }
+
+}
+
+
+/* PORTADA */
+
+.portada {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 40px auto;
+    padding: 0;
+}
+
+.portada img {
+    width: 100%;
+    max-width: 1400px;
+    height: 70vh;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* PORTADA PRINCIPAL */
+.portada-principal {
+    width: 100%;
+    text-align: center;
+    padding: 35px 20px 30px;
+    box-sizing: border-box;
+}
+
+.portada-principal img {
+    width: 70%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto 18px;
+}
+
+.portada-principal h2 {
+    font-size: 26px;
+    margin: 10px 0 20px;
+    color: #1b5e20;
+    font-weight: 600;
+}  
+
+/* PORTADA EXCLUSIVA DEL ESTABLECIMIENTO CHACRA VIEJA */
+.portada-establecimiento {
+    width: 100%;
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.portada-establecimiento img {
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+}
+
+.portada-establecimiento h2 {
+    font-size: 26px;
+    margin: 15px 0;
+}
+
+.portada-establecimiento p {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .portada-establecimiento {
+        padding: 0 12px;
+    }
+
+    .portada-establecimiento img {
+        height: 240px;
+    }
+
+    .portada-establecimiento h2 {
+        font-size: 22px;
+    }
+}
+/* AVISO DISCRETO DE PAGINA EN PREPARACION */
+.aviso-preparacion {
+    margin: 0;
+    padding: 6px 12px;
+    text-align: center;
+    background: #f1f5ef;
+    border: none;
+    border-radius: 0;
+    color: #1b5e20;
+}
+
+.aviso-preparacion p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.aviso-preparacion span {
+    display: none;
+
 }
