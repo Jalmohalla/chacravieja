@@ -333,3 +333,11 @@ main p {
     display: none;
 
 }
+.portada-principal img {
+    display: block;
+    width: 280px;
+    max-width: 85%;
+    height: auto;
+    margin: 30px auto 15px;
+    object-fit: contain;
+}
