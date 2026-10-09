@@ -341,3 +341,11 @@ main p {
     margin: 30px auto 15px;
     object-fit: contain;
 }
+.portada-principal h2 {
+    display: block;
+    text-align: center;
+    color: #1b5e20;
+    font-size: 30px;
+    margin: 20px auto 35px;
+    padding: 0 15px;
+}
